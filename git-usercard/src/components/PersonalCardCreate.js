@@ -22,21 +22,28 @@ const CardCreate = props => {
     
     return (
         <div className="container_">
-          {props.followers.map(item =>(
             <Card className={classes.root}>
                 <CardHeader
-                    avatar={<Avatar src={item.avatar_url} ></Avatar>}
-                    title={item.login}
-                    subheader="subheader"
+                    avatar={<Avatar src={props.myself.avatar_url} ></Avatar>}
+                    title={props.myself.login}
+                    subheader={props.myself.bio}
                 /> 
                 <CardContent className="flex">
-                    <Typography>
+                    <div className="follow">
+                        <Typography>
                         Followers: 
                     </Typography>
-                    {item.followers}
+                    {props.myself.followers}
+                    </div>
+                    <div className="follow">
+                        <Typography>
+                        Following: 
+                    </Typography>
+                    {props.myself.following}
+                    </div>
+                    
                 </CardContent>
-            </Card>
-        ))}  
+            </Card> 
         </div>
     );
   

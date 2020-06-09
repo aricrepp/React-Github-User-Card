@@ -3,3 +3,14 @@
   flex-direction: column;
   align-items: center;
 }
+
+.follow {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
